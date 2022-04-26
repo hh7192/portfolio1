@@ -1,0 +1,342 @@
+/* -------------------------- GENERAL -------------------------- */
+:root {
+    --color-heading:         #11245A;
+    --color-body:            #898fa1;
+    --color-navbar-active:   #E93B81;
+    --bg-navbar:             #581278;
+    --bg-overlay:            rgba(17, 1, 16, 0.8);
+    --bg-icon:               #E93B81;
+    --bg-icon-mute:          #806c7f;
+    --bg-team-card:          rgb(17, 1, 16);
+    --bg-team-card-light:    rgb(78, 3, 73);
+}
+* {
+    font-family: 'Lato', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body {
+    line-height: 1.8;
+    color: var(--color-body);
+    font-size: 1.5rem;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-heading);
+}
+.title-sm {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+a {
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+img {
+    width: 100%;
+}
+small {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+/* -------------------------- NAVBAR -------------------------- */
+.navbar {
+    border-bottom: 3px solid var(--bg-navbar);
+}
+.navbar .nav-link {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--color-navbar-active);
+}
+
+
+
+/* -------------------------- HOME -------------------------- */
+#home {
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url(../img/hero_img.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+#home h1 {
+    font-weight: 700;
+}
+#home p {
+    max-width: 550px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn {
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 12px 30px;
+    border-radius: 0;
+}
+
+
+
+/* -------------------------- ROADMAP -------------------------- */
+.section-intro{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-intro .hline {
+    width: 100px;
+    height: 2px;
+    background-color: var(--bg-navbar);
+    opacity: 0.4;
+    margin: 16px auto 0 auto;
+}
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-navbar-active);
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6rem;
+}
+.icon-box-mute {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-icon-mute);
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6rem;
+}
+
+
+
+/* -------------------------- PORTFOLIO -------------------------- */
+.portfolio-item {
+    overflow: hidden;
+    position: relative;
+}
+.portfolio-item img,
+.portfolio-item .portfolio-overlay {
+    transition: all 0.3s ease-out;
+}
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-overlay);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+}
+.portfolio-overlay h2,
+.portfolio-overlay h5 {
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+.portfolio-item:hover img {
+    transform: scale(1.2);
+}
+
+
+
+/* -------------------------- FEATURES -------------------------- */
+.feature .icon-box {
+    width: 32px;
+    height: 24px;
+    border-radius: 16px;
+    font-size: 2.4rem;
+}
+
+
+
+/* -------------------------- TEAM -------------------------- */
+.team-member {
+    background: var(--bg-team-card);
+}
+.team-member .odd {
+    background: var(--bg-team-card-light);
+}
+.team-member .hline {
+    width: 70px;
+    height: 2px;
+    margin: 16px auto;
+    background-color: #fff;
+    opacity: 0.5;
+}
+.team-member .team-member-img img,
+.team-member .team-member-img .social-icons {
+    transition: all 0.5s ease-in-out;
+}
+.team-member .team-member-img {
+    position: relative;
+    overflow: hidden;
+}
+.team-member .team-member-img .social-icons {
+    width: 100%;
+    height: 60px;
+    background-color: var(--bg-icon);
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-member .team-member-img .social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 2.4rem;
+    color: #fff;
+    border-radius: 100px;
+    text-decoration: none;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.team-member .team-member-img .social-icons a:hover {
+    background-color: #fff;
+    color: var(--color-navbar-active);
+}
+.team-member:hover .team-member-img .social-icons {
+    bottom: 0;
+}
+.team-member:hover img {
+    transform: translateY(-60px);
+}
+
+
+
+/* -------------------------- TESTIMONIALS -------------------------- */
+.review .stars {
+    color: #E93B81;
+}
+.review p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.8rem;
+    font-style: italic;
+}
+.nav-item .nav-link {
+    transition: all 0.3s ease;
+}
+.nav-item .nav-link img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+}
+.nav-pills .nav-link.active {
+    background: none;
+}
+.nav-pills .nav-link.active {
+    transform: scale(1.3);
+}
+
+
+
+/* -------------------------- CLIENTS -------------------------- */
+.client-img {
+    height: 35px;
+}
+
+
+
+/* -------------------------- CONTACT -------------------------- */
+.form-control {
+    padding: 10px;
+}
+.form-control:focus {
+    border: 1px solid #E93B81;
+    outline: none;
+    box-shadow: none;
+}
+.form-label {
+    letter-spacing: 3px;
+}
+
+#contact .btn {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 12px 30px;
+    border-radius: 0;
+    color: #fff;
+    background-color: #E93B81;
+}
+
+#contact .btn:hover {
+    background-color: #751d41;
+}
+
+
+
+/* -------------------------- CTA -------------------------- */
+#cta {
+    background: #E93B81;
+}
+
+
+
+/* -------------------------- FOOTER -------------------------- */
+.logo {
+    max-width: 100px;
+}
+.footer-top {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(17, 1, 16, 0.5);
+}
+footer .footer-links a {
+    display: block;
+    font-weight: 400;
+}
+footer .footer-links a,
+footer .social-icons a {
+    color: #898fa1;
+    text-decoration: none;
+}
+footer .social-icons a:hover,
+footer .footer-links a:hover {
+    color: #E93B81;
+}
+footer .social-icons {
+    font-size: 2rem;
+}
